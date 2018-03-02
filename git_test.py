@@ -11,6 +11,7 @@ from git import Repo
 repo_dir = ''
 repo = Repo(repo_dir)
 repo.git.add(A=True)
+print repo
 repo.index.commit(str(datetime.now()))
 origin = repo.remote('origin')
 origin.push()
